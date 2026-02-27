@@ -1,13 +1,8 @@
-import { motion } from 'framer-motion';
-
 export function Overlay() {
   return (
     <div className="absolute top-0 left-0 w-full h-full pointer-events-none flex flex-col justify-between p-8 text-white z-10">
       {/* Header */}
-      <motion.header
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
+      <header
         className="flex justify-between items-center"
       >
         <div className="text-2xl font-bold tracking-widest uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
@@ -18,13 +13,10 @@ export function Overlay() {
           <a href="#" className="hover:text-cyan-400 transition-colors">Tech</a>
           <a href="#" className="hover:text-cyan-400 transition-colors">Contact</a>
         </nav>
-      </motion.header>
+      </header>
 
       {/* Main Content */}
-      <motion.main
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, delay: 1 }}
+      <main
         className="flex flex-col items-center justify-center text-center space-y-4"
       >
         <h1 className="text-6xl md:text-8xl font-black tracking-tighter drop-shadow-lg">
@@ -42,13 +34,10 @@ export function Overlay() {
         <button className="pointer-events-auto mt-8 px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full text-white font-medium tracking-wide transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(0,255,255,0.3)]">
           Launch Experience
         </button>
-      </motion.main>
+      </main>
 
       {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1.5 }}
+      <footer
         className="flex justify-between items-end text-xs text-gray-500 uppercase tracking-widest"
       >
         <div>
@@ -57,7 +46,7 @@ export function Overlay() {
         <div>
           Status: <span className="text-green-400 animate-pulse">Online</span>
         </div>
-      </motion.footer>
+      </footer>
     </div>
   );
 }
