@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Cosmic 3D App - Next Gen (2026)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the future of interactive web experiences. This project is a cutting-edge 3D application built with React, Three.js, and modern web technologies, designed for performance and aesthetic brilliance.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Intelligent 3D Core:** A reactive particle system that responds to user input and device performance.
+-   **Smart Optimization:** Automatically adjusts graphical fidelity based on device capabilities using `PerformanceMonitor`.
+-   **Modern UI (2026 Aesthetic):** Features a "Bento" grid layout, floating glassmorphism dock, and fluid micro-interactions.
+-   **Robust Architecture:** Separation of concerns with dedicated systems for logic and presentation.
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Frontend:** React 19, TypeScript, Vite
+-   **3D Engine:** Three.js, @react-three/fiber, @react-three/drei
+-   **Styling:** Tailwind CSS (v4), Lucide React (Icons)
+-   **Animation:** Framer Motion, GSAP (optional integration ready)
 
-## Expanding the ESLint configuration
+## 📦 Installation & Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/cosmic-3d-app.git
+    cd cosmic-3d-app
+    ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    Open your browser at `http://localhost:5173`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎮 Usage Guide
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-   **Interaction:** Move your mouse over the 3D object to see it react (repulsion/attraction).
+-   **Navigation:** Use the floating dock at the bottom to switch views (Home, Explore, Settings).
+-   **Performance:** The app will automatically lower quality if frame drops are detected. You can manually tweak settings in the code if needed.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🤝 Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+MIT
